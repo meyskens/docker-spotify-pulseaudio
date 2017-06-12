@@ -14,10 +14,10 @@ RUN apt-get update && apt-get install -y \
 	libssl1.0.2 \
 	libxss1 \
 	--no-install-recommends && \
-	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59 && \
+	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886  && \
 	echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list && \
 	apt-get update && \
-	apt-get install --allow -y spotify-client && \
+	apt-get install -y spotify-client && \
 	rm -rf /var/lib/apt/lists/*
 
 ENV HOME /home/spotify
